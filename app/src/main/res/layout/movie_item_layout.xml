@@ -17,12 +17,13 @@
         <ImageView
             android:id="@+id/movie_poster"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/movie_poster_height"
+            android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:scaleType="centerCrop"
-            tools:src="@tools:sample/backgrounds/scenic[8]"/>
+            tools:src="@tools:sample/backgrounds/scenic[10]"/>
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/movie_title"
@@ -32,6 +33,9 @@
             android:layout_marginTop="16dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             android:textStyle="bold"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:ellipsize="end"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/movie_poster"
             tools:text="Avengers Infinity War" />
