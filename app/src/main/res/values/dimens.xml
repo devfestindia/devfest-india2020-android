@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movie_poster_height">200dp</dimen>
+    <dimen name="movie_card_elevation">4dp</dimen>
+    <dimen name="movie_card_corner_radius">8dp</dimen>
+    <dimen name="movie_card_margin">8dp</dimen>
+    <dimen name="movie_card_padding_bottom">16dp</dimen>
+</resources>
