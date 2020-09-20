@@ -1,4 +1,4 @@
-package com.devfest_india.myapplication
+package com.devfest.india.bmsclone
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

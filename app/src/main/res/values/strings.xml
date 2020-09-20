@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">BMS Clone</string>
     <string name="error_msg">Oops! Something went wrong :(</string>
 </resources>
