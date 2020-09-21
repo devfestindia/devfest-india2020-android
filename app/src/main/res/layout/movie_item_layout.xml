@@ -22,7 +22,7 @@
             app:layout_constraintDimensionRatio="H,16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             tools:src="@tools:sample/backgrounds/scenic[10]"/>
 
         <com.google.android.material.textview.MaterialTextView
