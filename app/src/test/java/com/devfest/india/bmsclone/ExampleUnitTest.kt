@@ -1,4 +1,4 @@
-package com.devfest_india.myapplication
+package com.devfest.india.bmsclone
 
 import org.junit.Test
 
