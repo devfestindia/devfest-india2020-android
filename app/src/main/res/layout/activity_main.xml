@@ -7,12 +7,14 @@
     tools:context=".MainActivity">
 
     <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         style="?android:attr/progressBarStyle" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -22,9 +24,11 @@
         tools:listitem="@layout/movie_item_layout" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/error_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:gravity="center"
         android:visibility="gone"
         tools:visibility="visible"
         android:text="@string/error_msg"/>

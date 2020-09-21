@@ -6,7 +6,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.devfest_india.myapplication"
+        applicationId "com.devfest.india.bmsclone"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
