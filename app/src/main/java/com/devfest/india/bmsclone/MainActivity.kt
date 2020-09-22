@@ -2,16 +2,14 @@ package com.devfest.india.bmsclone
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.RecyclerView
 import com.devfest.india.bmsclone.adapter.MoviesAdapter
 import com.devfest.india.bmsclone.model.Movie
 import com.devfest.india.bmsclone.model.MovieResponse
 import com.devfest.india.bmsclone.retrofit.MovieService
 import com.devfest.india.bmsclone.retrofit.RetrofitBuilder
+import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -19,23 +17,12 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var errorView: TextView
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var progressBar: ProgressBar
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //Bind views
-        bindViews()
+
         //Fetch List of Movies
         fetchMovies()
-    }
-
-    private fun bindViews() {
-        progressBar = findViewById(R.id.progress_bar)
-        recyclerView = findViewById(R.id.recycler_view)
-        errorView = findViewById(R.id.error_view)
     }
 
     private fun fetchMovies() {

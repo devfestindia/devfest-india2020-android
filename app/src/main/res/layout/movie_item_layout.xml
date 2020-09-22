@@ -15,7 +15,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/movie_poster"
+            android:id="@+id/moviePoster"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
             tools:src="@tools:sample/backgrounds/scenic[10]"/>
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/movie_title"
+            android:id="@+id/movieTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -37,20 +37,20 @@
             android:maxLines="1"
             android:ellipsize="end"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/movie_poster"
+            app:layout_constraintTop_toBottomOf="@+id/moviePoster"
             tools:text="Avengers Infinity War" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/release_date"
+            android:id="@+id/releaseDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
-            app:layout_constraintStart_toStartOf="@+id/movie_title"
-            app:layout_constraintTop_toBottomOf="@+id/movie_title"
+            app:layout_constraintStart_toStartOf="@+id/movieTitle"
+            app:layout_constraintTop_toBottomOf="@+id/movieTitle"
             tools:text="12th Dec 2020" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/avg_voting"
+            android:id="@+id/avgVoting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -60,16 +60,16 @@
             android:drawablePadding="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/movie_poster"
+            app:layout_constraintTop_toBottomOf="@+id/moviePoster"
             tools:text="9.2" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/total_votes"
+            android:id="@+id/totalVotes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/avg_voting"
+            app:layout_constraintTop_toBottomOf="@+id/avgVoting"
             tools:text="2910 votes" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
