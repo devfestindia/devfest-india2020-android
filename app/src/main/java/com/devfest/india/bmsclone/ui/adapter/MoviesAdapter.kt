@@ -13,8 +13,7 @@ import kotlinx.android.synthetic.main.movie_item_layout.view.*
 /**
  * @author Niharika.Arora
  */
-class MoviesAdapter(private val movies: List<Movie>) :
-    RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
+class MoviesAdapter(private val movies: List<Movie>) : RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.movie_item_layout, parent, false)
@@ -32,7 +31,9 @@ class MoviesAdapter(private val movies: List<Movie>) :
     class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         companion object {
-            private const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
+
+            private const val IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w500"
+
         }
 
         fun bind(movie: Movie) {
