@@ -32,7 +32,7 @@ class MoviesAdapter(private val movies: List<Movie>) :
     class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         companion object {
-            private const val IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w500"
+            private const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
         }
 
         fun bind(movie: Movie) {

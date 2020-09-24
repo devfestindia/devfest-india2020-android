@@ -7,8 +7,8 @@ class MovieRepositoryLocalImpl(private val movieDao: MovieDao) : MovieRepository
 
     override fun getMovies(onSuccess: (MovieResponse) -> Unit) {
         Thread {
-            val movies = movieDao.getMovies()
-            onSuccess(movies)
+            val movies: MovieResponse? = movieDao.getMovies()
+            onSuccess(movies ?: MovieResponse(results = emptyList()))
         }.start()
     }
 
