@@ -4,10 +4,13 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.devfest.india.bmsclone.data.local.database.entity.MovieResponse
 import com.devfest.india.bmsclone.data.local.database.dao.MovieDao
-import com.devfest.india.bmsclone.data.local.database.entity.Movie
+import com.devfest.india.bmsclone.data.local.database.typeconverter.MovieTypeConverter
 
-@Database(entities = [Movie::class], version = 1)
+@Database(entities = [MovieResponse::class], version = 1)
+@TypeConverters(MovieTypeConverter::class)
 abstract class MovieDatabase : RoomDatabase() {
 
     abstract fun movieDao(): MovieDao
