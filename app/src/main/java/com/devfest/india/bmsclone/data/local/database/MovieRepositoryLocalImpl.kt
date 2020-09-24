@@ -14,7 +14,7 @@ class MovieRepositoryLocalImpl(private val movieDao: MovieDao) : MovieRepository
 
     override fun insertMovies(movieResponse: MovieResponse, onSuccess: () -> Unit) {
         Thread {
-            movieDao.insertOrUpdate(movieResponse)
+            movieDao.insertMovies(movieResponse)
             onSuccess()
         }.start()
     }

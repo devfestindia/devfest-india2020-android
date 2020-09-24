@@ -10,7 +10,7 @@ import com.devfest.india.bmsclone.data.local.database.entity.MovieResponse
 interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertOrUpdate(movieResponse: MovieResponse)
+    fun insertMovies(movieResponse: MovieResponse)
 
     @Query("select * from tbl_movie_data")
     fun getMovies(): MovieResponse
