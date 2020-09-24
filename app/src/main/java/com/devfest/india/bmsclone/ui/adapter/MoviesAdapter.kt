@@ -1,4 +1,4 @@
-package com.devfest.india.bmsclone.adapter
+package com.devfest.india.bmsclone.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -21,13 +21,10 @@ class MoviesAdapter(private val movies: List<Movie>) :
         return MoviesViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return movies.count()
-    }
+    override fun getItemCount(): Int = movies.count()
 
-    override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-        return holder.bind(movies[position])
-    }
+    override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) =
+        holder.bind(movies[position])
 
     class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         companion object {
