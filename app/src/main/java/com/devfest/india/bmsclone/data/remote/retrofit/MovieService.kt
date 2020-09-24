@@ -1,6 +1,6 @@
-package com.devfest.india.bmsclone.retrofit
+package com.devfest.india.bmsclone.data.remote.retrofit
 
-import com.devfest.india.bmsclone.model.MovieResponse
+import com.devfest.india.bmsclone.data.MovieResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -1,4 +1,4 @@
-package com.devfest.india.bmsclone.retrofit
+package com.devfest.india.bmsclone.data.remote.retrofit
 
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
@@ -24,6 +24,7 @@ object RetrofitBuilder {
         .addConverterFactory(GsonConverterFactory.create(gson))
         .client(client)
         .build()
+
 
     fun <T> buildService(service: Class<T>): T {
         return retrofit.create(service)
