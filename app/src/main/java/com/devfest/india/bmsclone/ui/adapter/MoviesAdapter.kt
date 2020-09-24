@@ -1,6 +1,5 @@
 package com.devfest.india.bmsclone.ui.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,24 +19,19 @@ class MoviesAdapter(private val movies: List<Movie>) : RecyclerView.Adapter<Movi
         return MoviesViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return movies.count()
-    }
+    override fun getItemCount(): Int = movies.count()
 
-    override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-        return holder.bind(movies[position])
-    }
+    override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) =
+        holder.bind(movies[position])
 
     class MoviesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         companion object {
-
             private const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
-
         }
 
         fun bind(movie: Movie) {
-            Glide.with(itemView.context).load(IMAGE_BASE_URL + movie.posterPath).into(itemView.moviePoster)
+            Glide.with(itemView.context).load(IMAGE_BASE_URL + movie.posterPath)
+                .into(itemView.moviePoster)
             itemView.movieTitle.text = movie.title
             itemView.releaseDate.text = movie.releaseDate
             itemView.avgVoting.text = movie.voteAverage.toString()
