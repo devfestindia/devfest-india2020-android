@@ -32,7 +32,7 @@ class MoviesAdapter(private val movies: List<Movie>) : RecyclerView.Adapter<Movi
 
         companion object {
 
-            private const val IMAGE_BASE_URL = "http://image.tmdb.org/t/p/w500"
+            private const val IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
 
         }
 
