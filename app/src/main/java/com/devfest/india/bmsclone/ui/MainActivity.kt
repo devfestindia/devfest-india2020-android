@@ -14,10 +14,9 @@ import com.devfest.india.bmsclone.data.remote.retrofit.MovieRepositoryRemoteImpl
 import com.devfest.india.bmsclone.data.remote.retrofit.MovieService
 import com.devfest.india.bmsclone.data.remote.retrofit.RetrofitBuilder
 import com.devfest.india.bmsclone.ui.adapter.MoviesAdapter
-import com.devfest.india.bmsclone.ui.util.ViewModelFactory
+import com.devfest.india.bmsclone.ui.util.MainViewModelFactory
 import com.devfest.india.bmsclone.util.NetworkHelper
 import kotlinx.android.synthetic.main.activity_main.*
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +27,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setupViewModel()
         observeViewModel()
+    }
+
+    private fun setupViewModel() {
+        showProgress()
+
+        viewModel = ViewModelProvider(
+            this, MainViewModelFactory(
+                NetworkHelper(this),
+                MovieRepositoryLocalImpl(MovieDatabase.getInstance(this).movieDao()),
+                MovieRepositoryRemoteImpl(RetrofitBuilder.buildService(MovieService::class.java))
+            )
+        )[MainViewModel::class.java]
+        viewModel.getMovies()
     }
 
     private fun observeViewModel() {
@@ -41,20 +53,6 @@ class MainActivity : AppCompatActivity() {
             hideProgress()
         })
     }
-
-    private fun setupViewModel() {
-        showProgress()
-
-        viewModel = ViewModelProvider(
-            this, ViewModelFactory(
-                NetworkHelper(this),
-                MovieRepositoryLocalImpl(MovieDatabase.getInstance(this).movieDao()),
-                MovieRepositoryRemoteImpl(RetrofitBuilder.buildService(MovieService::class.java))
-            )
-        )[MainViewModel::class.java]
-        viewModel.getMovies()
-    }
-
 
     private fun showMovies(movies: List<Movie>) {
         recyclerView.visibility = View.VISIBLE

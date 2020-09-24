@@ -11,8 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory
  * @author Niharika.Arora
  */
 object RetrofitBuilder {
-    private const val BASE_URL = "https://api.themoviedb.org/3/"
 
+    private const val BASE_URL = "https://api.themoviedb.org/3/"
     private val client = OkHttpClient.Builder().build()
 
     private val gson: Gson = GsonBuilder()
@@ -24,7 +24,6 @@ object RetrofitBuilder {
         .addConverterFactory(GsonConverterFactory.create(gson))
         .client(client)
         .build()
-
 
     fun <T> buildService(service: Class<T>): T {
         return retrofit.create(service)

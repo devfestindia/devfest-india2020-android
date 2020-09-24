@@ -13,17 +13,17 @@ class MovieRepositoryRemoteImpl(private val apiService: MovieService) : MovieRep
         onError: (String) -> Unit
     ) {
         val response = apiService.getMovies(apiKey)
-        response.enqueue(object :Callback<MovieResponse>{
+        response.enqueue(object : Callback<MovieResponse> {
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
-                if (response.isSuccessful) {
+                if (response.isSuccessful && response.body() != null) {
                     onSuccess(response.body()!!)
                 } else {
                     onError(response.message())
                 }
             }
 
-            override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
-                onError(t.localizedMessage)
+            override fun onFailure(call: Call<MovieResponse>, throwable: Throwable) {
+                onError(throwable.localizedMessage)
             }
         })
 

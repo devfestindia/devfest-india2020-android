@@ -7,20 +7,14 @@ import com.devfest.india.bmsclone.data.remote.retrofit.MovieRepositoryRemote
 import com.devfest.india.bmsclone.ui.MainViewModel
 import com.devfest.india.bmsclone.util.NetworkHelper
 
-class ViewModelFactory(
+@Suppress("UNCHECKED_CAST")
+class MainViewModelFactory(
     private val networkHelper: NetworkHelper,
     private val movieRepositoryLocal: MovieRepositoryLocal,
     private val movieRepositoryRemote: MovieRepositoryRemote
-) :
-    ViewModelProvider.NewInstanceFactory() {
+) : ViewModelProvider.NewInstanceFactory() {
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T =
-        with(modelClass) {
-            when {
-                isAssignableFrom(MainViewModel::class.java) ->
-                    MainViewModel(networkHelper, movieRepositoryLocal, movieRepositoryRemote)
-
-                else -> throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
-            }
-        } as T
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        return MainViewModel(networkHelper, movieRepositoryLocal, movieRepositoryRemote) as T
+    }
 }

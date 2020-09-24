@@ -1,11 +1,10 @@
 package com.devfest.india.bmsclone.ui
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.devfest.india.bmsclone.data.local.database.entity.MovieResponse
 import com.devfest.india.bmsclone.data.local.database.MovieRepositoryLocal
+import com.devfest.india.bmsclone.data.local.database.entity.MovieResponse
 import com.devfest.india.bmsclone.data.remote.retrofit.MovieRepositoryRemote
 import com.devfest.india.bmsclone.util.NetworkHelper
 
