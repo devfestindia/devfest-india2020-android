@@ -1,5 +1,6 @@
 package com.devfest.india.bmsclone.data.local.database.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -13,6 +14,6 @@ interface MovieDao {
     fun insertMovies(movieResponse: MovieResponse)
 
     @Query("select * from tbl_movie_data")
-    fun getMovies(): MovieResponse
+    fun getMovies(): LiveData<MovieResponse>
 
 }

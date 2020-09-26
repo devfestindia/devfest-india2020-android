@@ -8,9 +8,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.devfest.india.bmsclone.R
 import com.devfest.india.bmsclone.data.local.database.MovieDatabase
-import com.devfest.india.bmsclone.data.local.database.MovieRepositoryLocalImpl
+import com.devfest.india.bmsclone.data.MovieRepositoryImpl
 import com.devfest.india.bmsclone.data.local.database.entity.Movie
-import com.devfest.india.bmsclone.data.remote.retrofit.MovieRepositoryRemoteImpl
 import com.devfest.india.bmsclone.data.remote.retrofit.MovieService
 import com.devfest.india.bmsclone.data.remote.retrofit.RetrofitBuilder
 import com.devfest.india.bmsclone.ui.adapter.MoviesAdapter
@@ -35,11 +34,10 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(
             this, MainViewModelFactory(
                 NetworkHelper(this),
-                MovieRepositoryLocalImpl(MovieDatabase.getInstance(this).movieDao()),
-                MovieRepositoryRemoteImpl(RetrofitBuilder.buildService(MovieService::class.java))
+                MovieRepositoryImpl(MovieDatabase.getInstance(this).movieDao(),RetrofitBuilder.buildService(MovieService::class.java))
             )
         )[MainViewModel::class.java]
-        viewModel.getMovies()
+        viewModel.onCreate()
     }
 
     private fun observeViewModel() {
