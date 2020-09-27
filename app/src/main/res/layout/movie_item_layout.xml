@@ -23,7 +23,7 @@
             app:layout_constraintDimensionRatio="H,16:9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             tools:src="@tools:sample/backgrounds/scenic[10]"/>
 
         <com.google.android.material.textview.MaterialTextView
@@ -37,6 +37,7 @@
             android:maxEms="10"
             android:maxLines="1"
             android:ellipsize="end"
+            android:fontFamily="@font/roboto"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/moviePoster"
             tools:text="Avengers Infinity War" />
