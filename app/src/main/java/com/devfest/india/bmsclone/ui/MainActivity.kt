@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         if (networkHelper.isNetworkConnected()) {
             showProgress()
 
-            val request = RetrofitBuilder.buildService(MovieService::class.java)
+            val request = RetrofitBuilder.buildService()
             val call = request.getMovies(API_KEY)
 
             call.enqueue(object : Callback<MovieResponse> {
