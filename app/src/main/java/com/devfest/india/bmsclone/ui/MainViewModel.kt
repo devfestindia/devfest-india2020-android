@@ -15,20 +15,32 @@ class MainViewModel(
 
     companion object {
         private const val API_KEY = "7bc0651fe0ea5973822df3bd27e779d9"
+        private const val SOMETHING_WENT_WRONG = "Something went wrong"
     }
 
-    fun onCreate() {
-        if (networkHelper.isNetworkConnected()) {
-            movieRepository.fetchMovies(API_KEY) {
-                _errorResponse.postValue(it)
-            }
-        }
-    }
-
+    private val _movieResponse = MutableLiveData<MovieResponse>()
     val movieResponse: LiveData<MovieResponse>
-        get() = movieRepository.getMovies()
+        get() = _movieResponse
 
     private val _errorResponse = MutableLiveData<String>()
     val errorResponse: LiveData<String>
         get() = _errorResponse
+
+    fun onCreate() {
+        if (networkHelper.isNetworkConnected()) {
+            movieRepository.fetchMovies(API_KEY, {
+                _movieResponse.postValue(it)
+            }, {
+                _errorResponse.postValue(it)
+            })
+        } else {
+            movieRepository.getMoviesLocal { movieResponse ->
+                if (movieResponse != null && movieResponse.results.isNotEmpty()) {
+                    _movieResponse.postValue(movieResponse)
+                } else {
+                    _errorResponse.postValue(SOMETHING_WENT_WRONG)
+                }
+            }
+        }
+    }
 }

@@ -1,16 +1,16 @@
 package com.devfest.india.bmsclone.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.devfest.india.bmsclone.R
-import com.devfest.india.bmsclone.data.local.database.MovieDatabase
 import com.devfest.india.bmsclone.data.MovieRepositoryImpl
+import com.devfest.india.bmsclone.data.local.database.MovieDatabase
 import com.devfest.india.bmsclone.data.local.database.entity.Movie
-import com.devfest.india.bmsclone.data.remote.retrofit.MovieService
 import com.devfest.india.bmsclone.data.remote.retrofit.RetrofitBuilder
 import com.devfest.india.bmsclone.ui.adapter.MoviesAdapter
 import com.devfest.india.bmsclone.ui.util.MainViewModelFactory
@@ -34,7 +34,10 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(
             this, MainViewModelFactory(
                 NetworkHelper(this),
-                MovieRepositoryImpl(MovieDatabase.getInstance(this).movieDao(),RetrofitBuilder.buildService(MovieService::class.java))
+                MovieRepositoryImpl(
+                    MovieDatabase.getInstance(this).movieDao(),
+                    RetrofitBuilder.buildService()
+                )
             )
         )[MainViewModel::class.java]
         viewModel.onCreate()

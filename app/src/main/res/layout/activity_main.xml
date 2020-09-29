@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.MainActivity">
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
 
     <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/progressBar"
@@ -32,6 +33,7 @@
         android:gravity="center"
         android:visibility="gone"
         tools:visibility="visible"
+        android:fontFamily="@font/roboto"
         android:text="@string/error_msg"/>
 
 </FrameLayout>

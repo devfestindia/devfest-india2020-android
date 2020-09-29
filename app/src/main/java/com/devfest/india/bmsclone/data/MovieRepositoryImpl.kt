@@ -1,6 +1,5 @@
 package com.devfest.india.bmsclone.data
 
-import androidx.lifecycle.LiveData
 import com.devfest.india.bmsclone.data.local.database.dao.MovieDao
 import com.devfest.india.bmsclone.data.local.database.entity.MovieResponse
 import com.devfest.india.bmsclone.data.remote.retrofit.MovieService
@@ -15,14 +14,16 @@ class MovieRepositoryImpl(
 
     override fun fetchMovies(
         apiKey: String,
+        onSuccess: (MovieResponse) -> Unit,
         onError: (String) -> Unit
-    ){
+    ) {
         val response = movieService.getMovies(apiKey)
         response.enqueue(object : Callback<MovieResponse> {
             override fun onResponse(call: Call<MovieResponse>, response: Response<MovieResponse>) {
                 if (response.isSuccessful && response.body() != null) {
                     Thread {
                         movieDao.insertMovies(response.body()!!)
+                        onSuccess(response.body()!!)
                     }.start()
                 } else {
                     onError(response.message())
@@ -35,15 +36,9 @@ class MovieRepositoryImpl(
         })
     }
 
-    override fun getMovies(): LiveData<MovieResponse> {
-        return movieDao.getMovies()
-    }
-
-
-    override fun insertMovies(movieResponse: MovieResponse, onSuccess: () -> Unit) {
+    override fun getMoviesLocal(onSuccess: (MovieResponse?) -> Unit) {
         Thread {
-            movieDao.insertMovies(movieResponse)
-            onSuccess()
+            onSuccess(movieDao.getMovies())
         }.start()
     }
 

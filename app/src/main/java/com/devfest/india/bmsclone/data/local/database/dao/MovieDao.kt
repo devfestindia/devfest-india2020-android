@@ -14,6 +14,6 @@ interface MovieDao {
     fun insertMovies(movieResponse: MovieResponse)
 
     @Query("select * from tbl_movie_data")
-    fun getMovies(): LiveData<MovieResponse>
+    fun getMovies(): MovieResponse
 
 }
