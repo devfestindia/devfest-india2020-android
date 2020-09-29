@@ -9,10 +9,10 @@ import com.devfest.india.bmsclone.util.NetworkHelper
 @Suppress("UNCHECKED_CAST")
 class MainViewModelFactory(
     private val networkHelper: NetworkHelper,
-    private val movieRepositoryLocal: MovieRepository
+    private val movieRepository: MovieRepository
 ) : ViewModelProvider.NewInstanceFactory() {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return MainViewModel(networkHelper, movieRepositoryLocal) as T
+        return MainViewModel(networkHelper, movieRepository) as T
     }
 }

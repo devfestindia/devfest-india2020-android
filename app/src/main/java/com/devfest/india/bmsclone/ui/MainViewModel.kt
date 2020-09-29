@@ -28,10 +28,10 @@ class MainViewModel(
 
     fun onCreate() {
         if (networkHelper.isNetworkConnected()) {
-            movieRepository.fetchMovies(API_KEY, {
-                _movieResponse.postValue(it)
-            }, {
-                _errorResponse.postValue(it)
+            movieRepository.fetchMovies(API_KEY, { movieResponse ->
+                _movieResponse.postValue(movieResponse)
+            }, { error ->
+                _errorResponse.postValue(error)
             })
         } else {
             movieRepository.getMoviesLocal { movieResponse ->
