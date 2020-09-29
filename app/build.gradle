@@ -53,7 +53,7 @@ dependencies {
 
     //Room DB for database
     implementation "androidx.room:room-runtime:2.2.5"
-    kapt  "androidx.room:room-compiler:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
 
     kapt "androidx.lifecycle:lifecycle-compiler:2.2.0"
 
