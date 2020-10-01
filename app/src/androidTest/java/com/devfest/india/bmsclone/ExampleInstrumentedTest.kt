@@ -1,4 +1,4 @@
-package com.devfest_india.myapplication
+package com.devfest.india.bmsclone
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

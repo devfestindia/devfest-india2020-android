@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="@dimen/movie_card_elevation"
+    app:cardCornerRadius="@dimen/movie_card_corner_radius"
+    android:layout_margin="@dimen/movie_card_margin"
+    app:contentPaddingBottom="@dimen/movie_card_padding_bottom"
+    app:cardBackgroundColor="@color/white"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/moviePoster"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic[10]"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/movieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moviePoster"
+            tools:text="Avengers Infinity War" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            app:layout_constraintStart_toStartOf="@+id/movieTitle"
+            app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+            tools:text="12th Dec 2020" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/avgVoting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/black"
+            app:drawableStartCompat="@drawable/ic_baseline_thumb_up_24"
+            android:drawablePadding="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moviePoster"
+            tools:text="9.2" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/totalVotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avgVoting"
+            tools:text="2910 votes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
