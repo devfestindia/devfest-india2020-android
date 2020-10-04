@@ -23,6 +23,6 @@ Day 1 starts with creating a fresh project and the beginner branch is a snapshot
 
 So if you know the basics of android development and join us directly on day 2 checkout the intermediate branch and follow along. Similarly, if you are joining us directly on the day 3 checkout expert branch and follow along.
 
-## App you would be getting at the end of the mobile track
+## Screenshot
 
 ![Screenshot of app](assets/screenshot.png)
