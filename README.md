@@ -23,6 +23,17 @@ Day 1 starts with creating a fresh project and the beginner branch is a snapshot
 
 So if you know the basics of android development and join us directly on day 2 checkout the intermediate branch and follow along. Similarly, if you are joining us directly on the day 3 checkout expert branch and follow along.
 
+>Please note we are using [the movie DB API](https://developers.themoviedb.org/3) to get movies from the remote server.
+To get movies from API you would need an API key. We would recommend to generate your own API key and use it. Please follow the below steps to configure your own API key. 
+>
+> 1. Register yourself on themoviedb.org https://www.themoviedb.org/signup 
+> 2. Fill all the required details to signup. 
+> 3. Open your Gmail and verify the email to get started. (Activate your account)
+> 4. Do login with the username and the password(you provided during signup)
+> 5. On Top right corner -> Click on your profile icon -> Settings -> API  -> Request an Api Key -> Choose developer option(for demo/sample project ) -> Accept the terms -> Fill all the required details (You can give dummy value for application url as you won’t be having that, give good summary for application summary) -> Submit -> Copy API key in [MainViewModel](app/src/main/java/com/devfest/india/bmsclone/ui/MainViewModel.kt).
+
+
+
 ## Screenshot
 
 ![Screenshot of app](assets/screenshot.png)
