@@ -34,7 +34,20 @@ To get movies from API you would need an API key. We would recommend to generate
 >
 >Also, note that this will be required for Day 2 where we hit API using retrofit
 
+## Gist for each session :page_facing_up:
+Each session requires you to copy-paste a few files. Please find the gist of all files required session wise below.
 
+Day 01
+
+- [build.gradle](https://gist.github.com/sagar-viradiya/ea05cdeb8471ca028dd361e53512189e) file
+- [colors.xml](https://gist.github.com/sagar-viradiya/914d9e57980d2d6979c43a8653308e7b) file
+- [activity_main.xml](https://gist.github.com/sagar-viradiya/64b6a8331b3f4d436ae499b9700ac1f4) file
+
+Day 02
+
+- [Movie.kt](https://gist.github.com/sagar-viradiya/4b27d42dc2ee8c24f21cbd5ae20d4f03) file
+- [NetworkHelper.kt](https://gist.github.com/sagar-viradiya/18ec984f6bea85337eab1770900c65aa) file
+- [URLs.txt](https://gist.github.com/sagar-viradiya/9d14a83a4f2dc4767d987e1b8aabb85e) file
 
 ## Screenshot
 
