@@ -23,8 +23,16 @@ Day 1 starts with creating a fresh project and the beginner branch is a snapshot
 
 So if you know the basics of android development and join us directly on day 2 checkout the intermediate branch and follow along. Similarly, if you are joining us directly on the day 3 checkout expert branch and follow along.
 
->Please note we are using [the movie DB API](https://developers.themoviedb.org/3) to get movies from the remote server.
-To get movies from API you would need an API key. We would recommend to generate your own API key and use it. Please follow the below steps to configure your own API key. 
+> Please note we are using [the movie DB API](https://developers.themoviedb.org/3) to get movies from the remote server.
+To get movies from API you would need an API key. 
+>
+> Try this in your [MainViewModel](https://github.com/DevFest-India/devfest-india2020-android/blob/cd5780f08dc4c54542459a97cb1c99363f4ced75/app/src/main/java/com/devfest/india/bmsclone/ui/MainViewModel.kt#L17): 
+>    ```kotlin
+>    companion object {
+>        private const val API_KEY = "7bc0651fe0ea5973822df3bd27e779d9"
+>    }
+>    ```
+> We would recommend to generate your own API key and use it if above key is not working. Please follow the below steps to configure your own API key. 
 >
 >1. Register yourself on https://www.themoviedb.org/signup 
 >2. Fill all the required details to signup. 
@@ -45,6 +53,7 @@ Day 01
 
 Day 02
 
+- [API key instructions](https://gist.github.com/sagar-viradiya/53020459385422686b025007a3cfc944)
 - [Movie.kt](https://gist.github.com/sagar-viradiya/4b27d42dc2ee8c24f21cbd5ae20d4f03) file
 - [NetworkHelper.kt](https://gist.github.com/sagar-viradiya/18ec984f6bea85337eab1770900c65aa) file
 - [URLs.txt](https://gist.github.com/sagar-viradiya/9d14a83a4f2dc4767d987e1b8aabb85e) file
