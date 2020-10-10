@@ -26,7 +26,7 @@ So if you know the basics of android development and join us directly on day 2 c
 > Please note we are using [the movie DB API](https://developers.themoviedb.org/3) to get movies from the remote server.
 To get movies from API you would need an API key. 
 >
-> Try this in your [MainViewModel](https://github.com/DevFest-India/devfest-india2020-android/blob/cd5780f08dc4c54542459a97cb1c99363f4ced75/app/src/main/java/com/devfest/india/bmsclone/ui/MainViewModel.kt#L17): 
+> Try this in your code: 
 >    ```kotlin
 >    companion object {
 >        private const val API_KEY = "7bc0651fe0ea5973822df3bd27e779d9"
@@ -38,7 +38,7 @@ To get movies from API you would need an API key.
 >2. Fill all the required details to signup. 
 >3. Open your email and verify the email to get started. (Activate your account)
 >4. Do login with the username and the password(you provided during signup)
->5. On Top right corner -> Click on your profile icon -> Settings -> API  -> Request an Api Key -> Choose developer option(for demo/sample project ) -> Accept the terms -> Fill all the required details (You can give dummy value for application url as you won’t be having that, give good summary for application summary) -> Submit -> Copy API key in [MainViewModel](https://github.com/DevFest-India/devfest-india2020-android/blob/cd5780f08dc4c54542459a97cb1c99363f4ced75/app/src/main/java/com/devfest/india/bmsclone/ui/MainViewModel.kt#L17).
+>5. On Top right corner -> Click on your profile icon -> Settings -> API  -> Request an Api Key -> Choose developer option(for demo/sample project ) -> Accept the terms -> Fill all the required details (You can give dummy value for application url as you won’t be having that, give good summary for application summary) -> Submit -> Copy API key and use.
 >
 >Also, note that this will be required for Day 2 where we hit API using retrofit
 
@@ -57,6 +57,10 @@ Day 02
 - [Movie.kt](https://gist.github.com/sagar-viradiya/4b27d42dc2ee8c24f21cbd5ae20d4f03) file
 - [NetworkHelper.kt](https://gist.github.com/sagar-viradiya/18ec984f6bea85337eab1770900c65aa) file
 - [URLs.txt](https://gist.github.com/sagar-viradiya/9d14a83a4f2dc4767d987e1b8aabb85e) file
+
+Day 03
+
+- [MovieTypeConverter.kt](https://gist.github.com/sagar-viradiya/ce8f765f072e38ad92d84a4b34add0f4) file
 
 ## Screenshot
 
