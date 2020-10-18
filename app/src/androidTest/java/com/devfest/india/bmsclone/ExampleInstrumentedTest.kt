@@ -20,5 +20,9 @@ class ExampleInstrumentedTest {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.devfest_india.myapplication", appContext.packageName)
+    
+        val ghj = mutableListOf("Image",".jpg")
+        ghj.add(".tiff")
+        println(ghj)
     }
 }
