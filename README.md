@@ -4,6 +4,9 @@
 
 This is the repo for the mobile track of Devfest India 2020. You can use this repo as your reference to check all the topics that got covered over 3 days.
 
+## Sessions :microphone:
+[![Day 1](https://img.youtube.com/vi/C8k9mdb9NE8/mqdefault.jpg)](https://youtu.be/C8k9mdb9NE8?t=4374) [![Day 2](https://img.youtube.com/vi/chtdrBvJpZ4/mqdefault.jpg)](https://youtu.be/chtdrBvJpZ4?t=3830) [![Day 3](https://img.youtube.com/vi/WrSvFgvEyKY/mqdefault.jpg)](https://youtu.be/WrSvFgvEyKY?t=5462)
+
 ## Targeted audience  :family: 
 This repo is for those who wanted to kickstart android development or just started and looking for a reference app that will teach them a few advanced concepts.
 
@@ -19,7 +22,7 @@ In the end, you will get an app with a nice movie listing UI supporting offline 
 ## How to use this repo to follow sessions? :technologist:
 
 Repo has 3 branches beginner, intermediate, and expert. 
-Day 1 starts with creating a fresh project and the beginner branch is a snapshot of that. The intermediate branch is a snapshot of the end of day 1. Day 2 starts from the intermediate branch and leads you to the expert branch. Finally, day 3 starts with the expert branch and leads you to the master branch.
+[Day 1](https://youtu.be/C8k9mdb9NE8?t=4374) starts with creating a fresh project and the beginner branch is a snapshot of that. The intermediate branch is a snapshot of the end of day 1. [Day 2](https://youtu.be/chtdrBvJpZ4?t=3830) starts from the intermediate branch and leads you to the expert branch. Finally, [day 3](https://youtu.be/WrSvFgvEyKY?t=5462) starts with the expert branch and leads you to the master branch.
 
 So if you know the basics of android development and join us directly on day 2 checkout the intermediate branch and follow along. Similarly, if you are joining us directly on the day 3 checkout expert branch and follow along.
 
